@@ -92,7 +92,7 @@ avalon.ready(function() {
 		initShareConfig("约惠春天，我给您发红包啦！",
 				MasterConfig.C("basePageUrl")+"coupon.html?o="+seedStr,
 				MasterConfig.C("basePageUrl")+"static/images/coupon_share_icon.jpg",
-				"我家大楼在线支付可抵扣，各种优惠享不停！");
+				"贤生活在线支付可抵扣，各种优惠享不停！");
         checkFromShare();
     commonui.initPage();
 });
