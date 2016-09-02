@@ -8,15 +8,15 @@ var MasterConfig = function() {
         //baseUrl: "http://www.e-shequ.com/wechat-sit/hexie/wechat/",
         //basePageUrl:"http://www.e-shequ.com/wechat-sit/hexie/",
 
-        baseUrl: "http://10.0.9.119/",
-        basePageUrl:"http://10.0.9.119/",
-        payPageFolder:"http://10.0.9.119/pay/",
+        baseUrl: "http://test.e-shequ.com/liangyou/wechat/hexie/wechat/",
+        basePageUrl:"http://test.e-shequ.com/liangyou/weixin/",
+        payPageFolder:"http://test.e-shequ.com/pay/",
         payPageSuffix:"ly",		//liangyou
         
         appId: "wx95f46f41ca5e570e",
         oauthUrl: "https://open.weixin.qq.com/connect/oauth2/authorize?",
         oauthUrlPostFix:"&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect",
-        bindAppId: "wx9ffe0a2b5a64a285",
+        bindAppId: "wxf51b0f0356e2432c",
 
         baidu_map_key:"RUWUgrEEF5VjoaWsstMMZwOD",
         shop_name: "贤生活",
