@@ -40,8 +40,8 @@ function computeAmount(){
 	
 }
 
+
 avalon.ready(function() {
-	
 	function getBillId(){
 		o.billId=getUrlParam("billIds");
 		o.stmtId=getUrlParam("stmtId");
@@ -84,10 +84,10 @@ avalon.ready(function() {
                 	notifyPaySuccess();
           	    },
           	    fail:function(res) {
-          	    	alert(JSON.stringify(res));
-			        	o.isPaying = false;
-			        	commonui.hideAjaxLoading();
-			        	$("#zzmb").hide();
+      	    		alert(JSON.stringify(res));
+		        	o.isPaying = false;
+		        	commonui.hideAjaxLoading();
+		        	$("#zzmb").hide();
           	    },
           	    cancel:function(res){
 					console.log(JSON.stringify(n));
@@ -98,8 +98,6 @@ avalon.ready(function() {
           	    
           	});
             
-//            o.userPayType = "9"
-//        	notifyPaySuccess();
 
         },
         r = function(n) {

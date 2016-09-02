@@ -1,17 +1,19 @@
 var MasterConfig = function() {
     var t = {
 
-        //baseUrl: "http://www.e-shequ.com/liangyou/wechat/hexie/wechat/",
-        //basePageUrl:"http://www.e-shequ.com/liangyou/weixin/",
+        //baseUrl: "http://www.e-shequ.com/baofang/wechat/hexie/wechat/",
+        //basePageUrl:"http://www.e-shequ.com/baofang/weixin/",
         //appId: "wx89c743b2fa762a2c",
 
         //baseUrl: "http://www.e-shequ.com/wechat-sit/hexie/wechat/",
         //basePageUrl:"http://www.e-shequ.com/wechat-sit/hexie/",
 
-        baseUrl: "http://test.e-shequ.com/liangyou/wechat/hexie/wechat/",
-        basePageUrl:"http://test.e-shequ.com/liangyou/weixin/",
+        baseUrl: "http://10.0.9.119/",
+        basePageUrl:"http://10.0.9.119/",
+        payPageFolder:"http://10.0.9.119/pay/",
+        payPageSuffix:"ly",		//liangyou
+        
         appId: "wx95f46f41ca5e570e",
-
         oauthUrl: "https://open.weixin.qq.com/connect/oauth2/authorize?",
         oauthUrlPostFix:"&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect",
         bindAppId: "wx9ffe0a2b5a64a285",
@@ -43,7 +45,7 @@ var Config = function() {
             no_goods: "更多新品正在陆续推出..."
         },
         user_info: {
-            avatar: "http://www.e-shequ.com/liangyou/weixin/static/images/logo.jpg",
+            avatar: "http://www.e-shequ.com/baofang/weixin/static/images/logo.jpg",
             nickname: "游客",
             levelname: "普通会员"
         },
@@ -53,7 +55,7 @@ var Config = function() {
             2 : "大楼VIP"
         },
         coupon:{
-            seedImg:"http://www.e-shequ.com/liangyou/weixin/static/img/banner/banner_market_shuiguo.jpg"
+            seedImg:"http://www.e-shequ.com/baofang/weixin/static/img/banner/banner_market_shuiguo.jpg"
         }
     },
     e = {};
@@ -162,6 +164,7 @@ function getUrlParam(name) {
     var r = window.location.search.substr(1).match(reg);  //匹配目标参数
     if (r != null) return unescape(r[2]); return null; //返回参数值
 }
+
 /**微信初始化**/
 function initWechat(apis) {
 	var n = "POST",
@@ -331,7 +334,7 @@ var common = {
             end = MasterConfig.C("oauthUrlPostFix");
             location.href = t + "appid=" + MasterConfig.C("appId") + "&redirect_uri=" + encodeURIComponent(n) +end+ "#wechat_redirect"
         } else common.alert("start api login"),
-        this.invokeApi("POST", "loginliangyou/" + o, null,
+        this.invokeApi("POST", "loginBaofang/" + o, null,
         function() {
             AJAXFlag = !1
         },
