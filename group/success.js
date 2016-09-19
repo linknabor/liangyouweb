@@ -30,7 +30,7 @@ avalon.ready(function() {
 		var desc="分享给小伙伴们一个超赞的限时特惠活动！";
 		var img=order.productPic;
 		if(order.seedStr!=null&&order.seedStr!=''){
-			title = "我家大楼专享现金券";
+			title = "贤生活专享现金券";
 			desc="分享给小伙伴们一个超赞的购物现金券！";
 			img=MasterConfig.C('basePageUrl')+"static/images/coupon_share_icon.jpg"
 			link=MasterConfig.C('basePageUrl')+"coupon.html?o="+order.seedStr;
