@@ -440,7 +440,7 @@ avalon.ready(function() {
             var pay_addr = billList[0].pay_cell_addr;
             var url = MasterConfig.C("payPageFolder")+MasterConfig.C("payPageSuffix");
             url += "paymentdetail.html?billIds="+bills+"&stmtId="+o.stmtId+"&payAddr="+escape(pay_addr)+"&totalPrice="+total_pay;
-            url += "&basePageUrl="+MasterConfig.C("basePageUrl");
+            url += "&basePageUrl="+escape(MasterConfig.C("basePageUrl"));
             window.location.href = url;
         }
     });
@@ -450,8 +450,8 @@ avalon.ready(function() {
      */
     function checkUserRegister(){
     	
-//    	common.checkRegisterStatus();
-    	var n = "GET",
+    	common.checkRegisterStatus();
+    	/*var n = "GET",
         a = "userInfo",
         i = null,
         e = function(n) {
@@ -475,7 +475,7 @@ avalon.ready(function() {
         	}
 	        return false;
         };
-        common.invokeApi(n, a, i, null, e, r)
+        common.invokeApi(n, a, i, null, e, r)*/
     	
     	
     }

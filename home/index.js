@@ -23,7 +23,7 @@
     });
 	query();
     initWechat(['onMenuShareTimeline','onMenuShareAppMessage']);
-    initShareConfig("鲜花、汽车、健康、维修、洗衣、家政...点亮生活，尽在我家大楼管家服务！",MasterConfig.C("basePageUrl")+"home/index.html?v=20160229",MasterConfig.C("basePageUrl")+"/static/images/share_logo1.png","足不出户即享简单便捷的居家生活");
+    initShareConfig("鲜花、汽车、健康、维修、洗衣、家政...点亮生活，尽在贤生活管家服务！",MasterConfig.C("basePageUrl")+"home/index.html?v=20160229",MasterConfig.C("basePageUrl")+"/static/images/share_logo1.png","足不出户即享简单便捷的居家生活");
     avalon.scan(document.body),
     common.setTitle("生活服务");
     checkFromShare();
