@@ -48,7 +48,7 @@ avalon.ready(function() {
     getBannerType();
     avalon.scan(document.body),
     FastClick.attach(document.body),
-    common.setTitle("社区物业");
+    common.setTitle("物业服务");
     initWechat(['onMenuShareTimeline','onMenuShareAppMessage']);
     initShareConfig("互帮、互助、分享的社区大家庭，尽在贤生活邻里之家!",MasterConfig.C("basePageUrl")+"wuye/index.html?v=20160229",MasterConfig.C("basePageUrl")+"/static/images/share_logo3.png","邻里趣事，快来分享");
     checkFromShare();
