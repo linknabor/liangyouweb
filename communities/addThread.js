@@ -153,7 +153,8 @@ avalon.ready(function()	{
 	    e = function(n) {
 			console.log("success:" + JSON.stringify(n));
 			alert("发布成功。");
-			location.href="index.html?category="+o.threadCategory;
+//			location.href="index.html?category="+o.threadCategory;
+			location.href="../wuye/index.html";
 	    },
 	    r = function(n) {
 	    	alert(n);
