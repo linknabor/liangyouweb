@@ -21,7 +21,7 @@ var MasterConfig = function() {
         baidu_map_key:"RUWUgrEEF5VjoaWsstMMZwOD",
         shop_name: "贤生活",
 
-        is_debug:false,
+        is_debug:true,
         statistics: {
             baidu_code: "62ff8bd29967ed5ee536babb82aa8d64",
             cnzz_script: '<script src="http://s11.cnzz.com/stat.php?id=1256090623&web_id=1256090623" language="JavaScript"></script>'
