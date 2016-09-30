@@ -33,7 +33,7 @@ avalon.ready(function(){
 		common.invokeApi("POST", "home/putToCart", {"items":items}, null, function(n){
 			var url = MasterConfig.C("payPageFolder")+MasterConfig.C("payPageSuffix");
             url += "xiyi_pay.html";
-            url += "&basePageUrl="+escape(MasterConfig.C("basePageUrl"));
+            url += "?basePageUrl="+escape(MasterConfig.C("basePageUrl"));
 			location.href = url;
 		}, function(n){
 			
