@@ -8,12 +8,12 @@ var MasterConfig = function() {
         //baseUrl: "http://www.e-shequ.com/wechat-sit/hexie/wechat/",
         //basePageUrl:"http://www.e-shequ.com/wechat-sit/hexie/",
 
-        baseUrl: "http://www.e-shequ.com/liangyou/wechat/hexie/wechat/",
-        basePageUrl:"http://www.e-shequ.com/liangyou/weixin/",
-        payPageFolder:"http://www.e-shequ.com/pay/",
+        baseUrl: "http://test.e-shequ.com/liangyou/wechat/hexie/wechat/",
+        basePageUrl:"http://test.e-shequ.com/liangyou/weixin/",
+        payPageFolder:"http://test.e-shequ.com/pay/",
         payPageSuffix:"ly",		//liangyou
         
-        appId: "wx89c743b2fa762a2c",
+        appId: "wx95f46f41ca5e570e",
         oauthUrl: "https://open.weixin.qq.com/connect/oauth2/authorize?",
         oauthUrlPostFix:"&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect",
         bindAppId: "wxf51b0f0356e2432c",
@@ -45,7 +45,7 @@ var Config = function() {
             no_goods: "更多新品正在陆续推出..."
         },
         user_info: {
-            avatar: "http://www.e-shequ.com/liangyou/weixin/static/images/logo.jpg",
+            avatar: "http://www.e-shequ.com/baofang/weixin/static/images/logo.jpg",
             nickname: "游客",
             levelname: "普通会员"
         },
@@ -55,7 +55,7 @@ var Config = function() {
             2 : "大楼VIP"
         },
         coupon:{
-            seedImg:"http://www.e-shequ.com/liangyou/weixin/static/img/banner/banner_market_shuiguo.jpg"
+            seedImg:"http://www.e-shequ.com/baofang/weixin/static/img/banner/banner_market_shuiguo.jpg"
         }
     },
     e = {};
