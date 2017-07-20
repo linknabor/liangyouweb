@@ -8,12 +8,12 @@ var MasterConfig = function() {
         //baseUrl: "https://www.e-shequ.com/wechat-sit/hexie/wechat/",
         //basePageUrl:"https://www.e-shequ.com/wechat-sit/hexie/",
 
-        baseUrl: "https://test.e-shequ.com/liangyou/wechat/hexie/wechat/",
-        basePageUrl:"https://test.e-shequ.com/liangyou/weixin/",
-        payPageFolder:"https://test.e-shequ.com/pay/",
+        baseUrl: "https://www.e-shequ.com/liangyou/wechat/hexie/wechat/",
+        basePageUrl:"https://www.e-shequ.com/liangyou/weixin/",
+        payPageFolder:"https://www.e-shequ.com/pay/",
         payPageSuffix:"ly",		//liangyou
         
-        appId: "wx95f46f41ca5e570e",
+        appId: "wx89c743b2fa762a2c",
         oauthUrl: "https://open.weixin.qq.com/connect/oauth2/authorize?",
         oauthUrlPostFix:"&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect",
         bindAppId: "wxf51b0f0356e2432c",
