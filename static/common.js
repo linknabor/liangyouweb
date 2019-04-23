@@ -3,11 +3,11 @@ var MasterConfig = function() {
     
     var t = {
 
-        baseUrl: /127|test/.test(location.origin)?'https://test.e-shequ.com/baofang/wechat/hexie/wechat/':
+        baseUrl: /127|test/.test(location.origin)?'https://test.e-shequ.com/liangyou/wechat/hexie/wechat/':
         /uat/.test(location.origin)?'https://uat.e-shequ.com/liangyou/wechat/hexie/wechat/':
         'https://www.e-shequ.com/liangyou/wechat/hexie/wechat/',
         
-        basePageUrl:/127|test/.test(location.origin)?'https://test.e-shequ.com/baofang/weixin/':
+        basePageUrl:/127|test/.test(location.origin)?'https://test.e-shequ.com/liangyou/weixin/':
         /uat/.test(location.origin)?'https://uat.e-shequ.com/liangyou/weixin/':
         'https://www.e-shequ.com/liangyou/weixin/',
         
