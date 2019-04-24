@@ -2,11 +2,12 @@
 var MasterConfig = function() {
     
     var t = {
-        baseUrl: /127|test/.test(location.origin)?'https://test.e-shequ.com/baofang/wechat/hexie/wechat/':
+
+        baseUrl: /127|test/.test(location.origin)?'https://test.e-shequ.com/liangyou/wechat/hexie/wechat/':
         /uat/.test(location.origin)?'https://uat.e-shequ.com/liangyou/wechat/hexie/wechat/':
         'https://www.e-shequ.com/liangyou/wechat/hexie/wechat/',
         
-        basePageUrl:/127|test/.test(location.origin)?'https://test.e-shequ.com/baofang/weixin/':
+        basePageUrl:/127|test/.test(location.origin)?'https://test.e-shequ.com/liangyou/weixin/':
         /uat/.test(location.origin)?'https://uat.e-shequ.com/liangyou/weixin/':
         'https://www.e-shequ.com/liangyou/weixin/',
         
@@ -14,16 +15,14 @@ var MasterConfig = function() {
         /uat/.test(location.origin)?'wx9ffe0a2b5a64a285':
         'wxbd214f5765f346c1',
 
-
         bindAppId: /127|test/.test(location.origin)?'wx95f46f41ca5e570e':
         /uat/.test(location.origin)?'wx9ffe0a2b5a64a285':
         'wxf51b0f0356e2432c',
 
-
         oauthUrl: "http://open.weixin.qq.com/connect/oauth2/authorize?",
         oauthUrlPostFix:"&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect",
 		oauthUrlPostSilent:"&response_type=code&scope=snsapi_base&state=123#wechat_redirect",
-
+        
         
         baidu_map_key:"RUWUgrEEF5VjoaWsstMMZwOD",
 
@@ -35,7 +34,6 @@ var MasterConfig = function() {
         return t[e]
     },
     e
-
 } (); 
 
 export var Config = function() {
@@ -49,7 +47,6 @@ export var Config = function() {
             no_goods: "更多新品正在陆续推出..."
         },
         user_info: {
-
             avatar: "https://www.e-shequ.com/liangyou/weixin/static/images/logo.jpg",
             nickname: "游客",
             levelname: "普通会员"
@@ -60,7 +57,6 @@ export var Config = function() {
             2 : "大楼VIP"
         },
         coupon:{
-
             seedImg:"https://www.e-shequ.com/liangyou/weixin/static/img/banner/banner_market_shuiguo.jpg"
         }
     },
@@ -111,7 +107,6 @@ function showDialog(title,placeholder,content,onConfirmMsg,onCancelClick){
     });
 }
 Date.prototype.format = function(fmt){
-
       var o = {
         "M+" : this.getMonth()+1,
         "d+" : this.getDate(),
@@ -175,9 +170,7 @@ function getUrlParam(name) {
     if (r != null) return unescape(r[2]); return null; //返回参数值
 }
 
-
 function initShareConfig(title,link,img,desc){
-
     if(link.indexOf(MasterConfig.C("basePageUrl"))>=0
             &&link.indexOf('shareCode')<0
             &&getCookie("shareCode")!=null&&getCookie("shareCode")!=''){
@@ -190,7 +183,6 @@ function initShareConfig(title,link,img,desc){
         }
         link = link + "shareCode="+getCookie("shareCode");
     }
-
 
     wx.ready(function(){
         wx.onMenuShareTimeline({
@@ -207,7 +199,6 @@ function initShareConfig(title,link,img,desc){
     });
 }
 function checkFromShare(salePlanType,salePlanId) {
-
     var shareCode = getUrlParam("shareCode");
     if(shareCode!=null&&shareCode!=''){
         var pobj = {};
@@ -223,7 +214,6 @@ function checkCodeAndLogin(){
     var getData = common._GET();
     var b = getData.bind;
     var o = getData.code;
-
     if(!b&&o){
         common.login();
         return false;
@@ -236,10 +226,8 @@ function toBindLink(){
     p = common.addParamObject(p,"bind","true");
     var n = location.origin + location.pathname + common.buildUrlParamString(p),
     t = MasterConfig.C("oauthUrl");
-
    var end = MasterConfig.C("oauthUrlPostFix");
     var url = t + "appid=" + MasterConfig.C("bindAppId") + "&redirect_uri=" + encodeURIComponent(n) +end+ "#wechat_redirect";
-
     location.href = url;
 }
 function checkBindAndBind(){
@@ -257,20 +245,16 @@ function checkBindAndBind(){
     }
 }
 
-
 function updateCurrentAddrId(addrId){
-
     var duration = new Date().getTime()/1000 + 3600*24*30;
     setCookie("currentAddrId", addrId, duration);
 }
 function isRegisted(){
-
     var tel = getCookie("tel");
     return tel&&tel!='null';
 }
 
 function toRegisterAndBack(){
-
     var n = location.origin + common.removeParamFromUrl(["from", "bind", "code", "share_id", "isappinstalled", "state", "m", "c", "a"]);
     location.href=MasterConfig.C('basePageUrl')+"person/index.html?#/register?comeFrom="+encodeURIComponent(n)+common.addParamHsah();
 }
@@ -295,12 +279,10 @@ window.common = {
                 dataType: "json",
                 beforeSend: t,
                 success: function(e) {
-
                     // common.alert("success data: " + JSON.stringify(e)),
                     dealWithAjaxData(o, e, i, r);
                 },
                 error: function(e) {
-
                     common.alert("error data: " + JSON.stringify(e));
                 }
             };
@@ -337,19 +319,16 @@ window.common = {
     login: function() {
         var o = this._GET().code;
         if (common.alert("code: " + o), void 0 === o) {
-
             var n = location.origin + common.removeParamFromUrl(["from","bind", "code", "share_id", "isappinstalled", "state", "m", "c", "a"])+common.addParamHsah(),
             t = MasterConfig.C("oauthUrl"),
             end = MasterConfig.C("oauthUrlPostFix");
             location.href = t + "appid=" + MasterConfig.C("appId") + "&redirect_uri=" + encodeURIComponent(n) +end+ "#wechat_redirect"
         } else common.alert("start api login"),
-
         this.invokeApi("POST", "login/" + o, null,
         function() {
             AJAXFlag = !1
         },
         function(x) {
-
             common.updateUserStatus(x.result);
             AJAXFlag = !0,
             location.href = location.origin +common.removeParamFromUrl(["code"]);
@@ -358,8 +337,6 @@ window.common = {
     checkRegisterStatus:function(){
         let type=getUrlParam('type');
         if(!getCookie("UID")){
-
-
             common.login();/**不应该出现*/
             return false;
         }
@@ -373,7 +350,6 @@ window.common = {
         return true;
     },
     hasRegister:function(){
-
         return getCookie("UID")&&isRegisted();
     },
     _GET: function() {
@@ -428,7 +404,6 @@ window.common = {
     },
     wechatAuthorize: function() {
         var e = MasterConfig.C("appId");
-
         var n = location.origin + common.removeParamFromUrl(["from", "code", "share_id", "isappinstalled", "state", "m", "c", "a"])+common.addParamHsah(),
         t = MasterConfig.C("oauthUrl");
         end = MasterConfig.C("oauthUrlPostFix");
@@ -438,7 +413,6 @@ window.common = {
 
 };
 var commonui = {
-		
         initPage:function() {
             if ($("#LoadingBar") != null) {
                 $("#LoadingBar").css("display","none");
